@@ -2,8 +2,10 @@
 A few CSS changes to improve [Mixer](https://mixer.com/).
 
 ## How to Use?
-- Download the last file or clone this repository.
-- Open Stylish (or any other CSS website changer) and import the CSS file.
+- Download the [latest `style.css`](https://github.com/xlxAciDxlx/Mixer-Tweaks/raw/master/style.css) or clone this repository.
+- Open Stylish (or your preferred utility for changing a site's CSS properties) and import the contents of `style.css`
+  - Ensure that the style only applies to/runs on `mixer.com`
+- Activate the style
 - Done!
 
 ## Suggestions/Feedback?
