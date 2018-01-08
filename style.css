@@ -1,0 +1,123 @@
+/**
+ * Change "Host 2.0" bar to be the same width as the video player
+ */
+b-host-bar {
+	padding: 8px 16px 0 16px!important;
+}
+
+/**
+ * Make the "Host 2.0" chat tabs flexible
+ */
+[_nghost-c13] {
+	justify-content: center!important;
+}
+
+.bui-tab-underline[_ngcontent-c13] {
+	width: 30.2%!important;
+}
+
+[_nghost-c13] > * {
+	min-width: 140px!important;
+	width: 100%!important;
+}
+
+/**
+ * Remove the padding from the left/right of chat tabs
+ */
+[_nghost-c40] {
+	padding-left: 0!important;
+	padding-right: 0!important;
+}
+
+/**
+ * Add border to chat messages
+ */
+b-channel-chat-message {
+	border-bottom: 2px solid rgba(228, 238, 242, 0.12);
+}
+
+/**
+ * Remove border from last chat message
+ */
+.chat-message:last-child {
+	border-bottom: 0;
+}
+
+/**
+ * Alternate the background color of chat messages
+ */
+.chat-message:nth-child(even) {
+	background-color: rgba(228, 238, 242, 0.04);
+}
+
+/**
+ * Remove fixed height from timestamp
+ * Change color to white
+ * Move timestamp up 1px to not make the bottom border look odd
+ * Remove bottom margin
+ */
+.timestamp {
+	color: #FFFFFF!important;
+	height: auto!important;
+	margin-bottom: 0!important;
+	margin-top: -1px!important;
+}
+
+/**
+ * Remove border from timestamps
+ */
+.timestamp:before {
+	border-bottom: 0!important;
+}
+
+/**
+ * Move timestamp to the middle of chat
+ * Add background to timestamps
+ * Change width to 100%
+ */
+.timestamp > * {
+	background-color: rgba(228, 238, 242, 0.12);
+	opacity: 1!important;
+	padding: 2px;
+	text-align: center;
+	width: 100%;
+}
+
+/**
+ * Change opacity on timestamps
+ */
+.timestamp span {
+	opacity: 0.75!important;
+}
+
+/**
+ * Enlarge chat avatars
+ */
+b-channel-chat-messages b-channel-chat-message {
+	padding: 3px 6px 3px calc(33px + 10px) !important;
+	min-height: calc(32px + 6px);
+}
+
+b-channel-chat-messages b-channel-chat-author .image {
+	width: calc(34px + 2px) !important;
+	height: calc(34px + 2px) !important;
+	left: calc(-34px - 6px) !important;
+	top: calc(10px - 34px/2) !important;
+	margin-top: 0 !important;
+	border-radius: 3px !important;
+}
+
+b-channel-chat-messages b-channel-chat-author .image b-avatar,
+b-channel-chat-messages b-channel-chat-author .image b-avatar img {
+	width: calc(33px) !important;
+	height: calc(33px) !important;
+	border-radius: 3px !important;
+}
+
+b-channel-chat-messages b-channel-chat-author .image {
+	top: 4px !important;
+}
+
+b-channel-chat-messages b-channel-chat-message .body {
+	display: inherit !important;
+}
