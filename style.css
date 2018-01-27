@@ -1,6 +1,7 @@
 /**
- * Change "Host 2.0" bar to be the same width as the video player
+ * Change "Host 2.0" bar and VoD bar to be the same width as the video player
  */
+b-vod-bar,
 b-host-bar {
 	padding: 8px 16px 0 16px!important;
 }
@@ -8,15 +9,15 @@ b-host-bar {
 /**
  * Make the "Host 2.0" chat tabs flexible
  */
-[_nghost-c13] {
+b-channel-chat-tabs [_nghost-c13] {
 	justify-content: center!important;
 }
 
-.bui-tab-underline[_ngcontent-c13] {
+b-channel-chat-tabs .bui-tab-underline[_ngcontent-c13] {
 	width: 30.2%!important;
 }
 
-[_nghost-c13] > * {
+b-channel-chat-tabs [_nghost-c13] > * {
 	min-width: 140px!important;
 	width: 100%!important;
 }
@@ -24,7 +25,8 @@ b-host-bar {
 /**
  * Remove the padding from the left/right of chat tabs
  */
-[_nghost-c40] {
+b-channel-chat-tabs {
+	padding: 0!important;
 	padding-left: 0!important;
 	padding-right: 0!important;
 }
@@ -32,22 +34,22 @@ b-host-bar {
 /**
  * Add border to chat messages
  */
-b-channel-chat-message {
+.message-container > * {
 	border-bottom: 2px solid rgba(228, 238, 242, 0.12);
 }
 
 /**
  * Remove border from last chat message
  */
-.chat-message:last-child {
+.message-container > *:last-child {
 	border-bottom: 0;
 }
 
 /**
  * Alternate the background color of chat messages
  */
-.chat-message:nth-child(even) {
-	background-color: rgba(228, 238, 242, 0.04);
+.message-container > *:nth-child(even):not([class]) {
+	background-color: rgba(228, 238, 242, 0.06);
 }
 
 /**
@@ -84,6 +86,13 @@ b-channel-chat-message {
 }
 
 /**
+ * Hide timestamps if they are the last child in the chat
+ */
+.timestamp:last-child {
+	display: none!important;
+}
+
+/**
  * Change opacity on timestamps
  */
 .timestamp span {
@@ -94,30 +103,39 @@ b-channel-chat-message {
  * Enlarge chat avatars
  */
 b-channel-chat-messages b-channel-chat-message {
-	padding: 3px 6px 3px calc(33px + 10px) !important;
-	min-height: calc(32px + 6px);
+	padding: 3px 6px 3px calc(33px + 10px)!important;
+	min-height: calc(48px + 6px);
 }
 
 b-channel-chat-messages b-channel-chat-author .image {
-	width: calc(34px + 2px) !important;
-	height: calc(34px + 2px) !important;
-	left: calc(-34px - 6px) !important;
-	top: calc(10px - 34px/2) !important;
-	margin-top: 0 !important;
-	border-radius: 3px !important;
+	width: calc(34px + 2px)!important;
+	height: calc(34px + 2px)!important;
+	left: calc(-34px - 6px)!important;
+	top: calc(8px - 34px/2)!important;
+	margin-top: 0!important;
+	border-radius: 3px!important;
 }
 
 b-channel-chat-messages b-channel-chat-author .image b-avatar,
 b-channel-chat-messages b-channel-chat-author .image b-avatar img {
-	width: calc(33px) !important;
-	height: calc(33px) !important;
-	border-radius: 3px !important;
+	width: calc(33px)!important;
+	height: calc(33px)!important;
+	border-radius: 3px!important;
 }
 
 b-channel-chat-messages b-channel-chat-author .image {
-	top: 4px !important;
+	top: 4px!important;
 }
 
 b-channel-chat-messages b-channel-chat-message .body {
-	display: inherit !important;
+	display: inherit!important;
+}
+
+/**
+ * Move chat messages onto their own line
+ * Remove some margin from the top so each message doesn't take up a huge amount of space
+ */
+b-channel-chat-messages b-channel-chat-message .textComponent {
+	display: block;
+	margin-top: -4px;
 }
