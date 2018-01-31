@@ -1,5 +1,8 @@
 # Changelog
-## 1.0.1
+## 1.0.2
+- Fixed an issue that caused smilies/emojis to be put on their own line (fixes #4)
+
+### 1.0.1
 - Applied adjustments that were made to the "Host 2.0" bar to the VoD (Video on Demand) bar
 - Chat tab rules should no longer apply to the homepage
 - Fixed the min-height of each chat message being less than it should be, resulting in chat messages overlapping each other
@@ -8,5 +11,5 @@
 - Updated some CSS rules to use element names rather than class names, as they _should_ be less likely to change.
 - Fixed alternating chat backgrounds not working
 
-## 1.0.0
+### 1.0.0
 - Initial Release

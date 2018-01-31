@@ -135,7 +135,8 @@ b-channel-chat-messages b-channel-chat-message .body {
  * Move chat messages onto their own line
  * Remove some margin from the top so each message doesn't take up a huge amount of space
  */
-b-channel-chat-messages b-channel-chat-message .textComponent {
+b-channel-chat-messages b-channel-chat-message .textComponent:nth-child(2):before {
+	content: " ";
 	display: block;
-	margin-top: -4px;
+	visibility: hidden;
 }
