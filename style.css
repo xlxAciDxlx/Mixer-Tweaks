@@ -7,17 +7,19 @@ b-host-bar {
 }
 
 /**
- * Make the "Host 2.0" chat tabs flexible
+ * Make the "Host 2.0"/Offline VoD chat tabs flexible
  */
-b-channel-chat-tabs [_nghost-c13] {
+b-channel-chat-tabs,
+bui-tab-bar {
 	justify-content: center!important;
 }
 
-b-channel-chat-tabs .bui-tab-underline[_ngcontent-c13] {
-	width: 30.2%!important;
+b-channel-chat-tabs bui-tab-bar .bui-tab-underline,
+bui-tab-bar .bui-tab-underline[_ngcontent-c13] {
+	width: 34.2%!important;
 }
 
-b-channel-chat-tabs [_nghost-c13] > * {
+bui-tab-bar bui-tab-label {
 	min-width: 140px!important;
 	width: 100%!important;
 }
@@ -25,7 +27,7 @@ b-channel-chat-tabs [_nghost-c13] > * {
 /**
  * Remove the padding from the left/right of chat tabs
  */
-b-channel-chat-tabs {
+b-channel-chat-tabs, bui-tab-bar {
 	padding: 0!important;
 	padding-left: 0!important;
 	padding-right: 0!important;
@@ -139,4 +141,13 @@ b-channel-chat-messages b-channel-chat-message .textComponent:nth-child(2):befor
 	content: " ";
 	display: block;
 	visibility: hidden;
+}
+
+/**
+ * Add a background to the "streaming now" browse bar on the homepage
+ * Lighten up the font color for increased visibility
+ */
+.browse-list-container > h1 {
+	background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.08), rgba(255,255,255,0));
+	color: #DADADA;
 }

@@ -1,5 +1,10 @@
 # Changelog
-## 1.0.2
+## 1.0.3
+- Chat tabs should now appear properly on channel VoD pages (fixes #5)
+- Added a background to the "Streaming Now" browse bar on the homepage
+- Lightened up the font color of the "Streaming Now" bar for increased visibility
+
+### 1.0.2
 - Fixed an issue that caused smilies/emojis to be put on their own line (fixes #4)
 
 ### 1.0.1
